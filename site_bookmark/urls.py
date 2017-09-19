@@ -15,13 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.contrib import admin
-
-from bookmark.models import Bookmark
-from django.views.generic import ListView,DetailView
-
+from bookmark.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^bookmark/$', ListView.as_view(model=Bookmark),name='index'),
-    url(r'bookmark/(?P<pk>\d+)/$',DetailView.as_view(model=Bookmark),name='detail')
+    url(r'^bookmark/$', BookmarkListV.as_view(),name='index'),
+    url(r'bookmark/(?P<pk>\d+)/$', BookmarkDetailV.as_view(), name='detail')
 ]
