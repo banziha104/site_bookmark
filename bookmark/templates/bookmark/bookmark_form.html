@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmark Create</title>
+</head>
+<body>
+<h1>Bookmark Create Page</h1>
+<form action="." method="post"> <!--action -> 어느페이지로 보낼지-->
+    {% csrf_token %}        <!--현재 페이지가 변조가 되지 않았나 확인함(보안 사항)-->
+    {{form.as_p}}           <!-- -->
+    <input type="submit" value="OK">
+</form>
+</body>
+</html>

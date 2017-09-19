@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Delete</title>
+</head>
+<body>
+<h1>Bookmark Delete Confirmation</h1>
+<form action="." method="post">
+    {% csrf_token %}
+    <p>
+        Do you want to delte {{ object }}
+        <input type="submit" value="Delete">
+    </p>
+</form>
+</body>
+</html>

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Bookmark(models.Model):
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User,null=True)
     title = models.CharField(max_length=100, blank=True, null=True) # Char 필드 생성
     url = models.URLField('url',unique=True)
 
